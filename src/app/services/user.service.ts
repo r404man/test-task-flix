@@ -10,12 +10,12 @@ export class UserService {
 
   constructor() {}
 
-  setRole(role: UserRole): void {
+  setUserRole(role: UserRole): void {
     this.userRole.next(role);
   }
 
   getUserRole(): Observable<UserRole> {
-    this.setRole('USER');
+    this.setUserRole('USER');
 
     return this.userRole.asObservable();
   }
