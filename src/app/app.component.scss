@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .app-btn {
+    font-size: 24px;
+    padding: 24px 40px;
+    &:disabled {
+      pointer-events: all !important;
+      cursor: not-allowed !important;
+    }
+    &:last-child {
+      margin-top: 50px;
+    }
+  }
+}
