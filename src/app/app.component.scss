@@ -14,22 +14,32 @@
 .role-buttons-item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
   .role-buttons-title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 18px;
   }
   .role-buttons {
+    display: flex;
+    justify-content: center;
     button {
       font-size: 24px;
-      padding: 24px 40px;
+
       &:first-child {
         margin-right: 15px;
       }
       &:disabled {
         pointer-events: all !important;
         cursor: not-allowed !important;
+      }
+
+      &.btn-icon {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
       }
     }
   }

@@ -82,5 +82,50 @@
         </button>
       </div>
     </div>
+
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Fab</span>
+      <div class="role-buttons">
+        <button
+          mat-fab
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'Role USER are not allowed 123'"
+        >
+          <mat-icon>home</mat-icon>
+        </button>
+
+        <button
+          mat-fab
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === false"
+        >
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Mini-Fab</span>
+      <div class="role-buttons">
+        <button
+          mat-mini-fab
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'R121212211221'"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div>
+          <button
+            mat-mini-fab
+            [isViewerDisabled]="(isAdmin | async) === false"
+            [viewerTooltipMessage]="'R121212211221'"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

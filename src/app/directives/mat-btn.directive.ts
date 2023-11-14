@@ -15,7 +15,10 @@ import { MatTooltip } from '@angular/material/tooltip';
    button[mat-stroked-button],
    button[mat-raised-button],
    button[mat-flat-button],
-   button[mat-icon-button]`,
+   button[mat-icon-button],
+   button[mat-mini-fab],
+   button[mat-fab]`,
+
   providers: [MatTooltip],
 })
 export class MatButtonDirective implements AfterViewInit {
