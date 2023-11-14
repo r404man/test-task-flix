@@ -11,10 +11,14 @@ import {
 import { MatTooltip } from '@angular/material/tooltip';
 
 @Directive({
-  selector: '[role-btn]',
+  selector: `button[mat-button],
+   button[mat-stroked-button],
+   button[mat-raised-button],
+   button[mat-flat-button],
+   button[mat-icon-button]`,
   providers: [MatTooltip],
 })
-export class RoleBtnDirective implements AfterViewInit {
+export class MatButtonDirective implements AfterViewInit {
   @Input() isViewerDisabled: boolean = false;
   @Input() viewerTooltipMessage: string = 'Role USER are not allowed';
 

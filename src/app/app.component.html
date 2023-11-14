@@ -1,23 +1,86 @@
 <div class="app">
-  Your role: {{ userRole | async }}
+  <span class="app-title"> Your role: {{ userRole | async }} </span>
 
-  <button
-    role-btn
-    mat-raised-button
-    color="primary"
-    class="app-btn"
-    [isViewerDisabled]="(isAdmin | async) === true"
-    [viewerTooltipMessage]="'Role USER are not allowed 123'"
-  >
-    USER
-  </button>
+  <div class="role-buttons-list">
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Basic</span>
+      <div class="role-buttons">
+        <button
+          mat-button
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'Role USER are not allowed 123'"
+        >
+          USER
+        </button>
 
-  <button
-    class="app-btn"
-    mat-raised-button
-    role-btn
-    [isViewerDisabled]="(isAdmin | async) === false"
-  >
-    ADMIN
-  </button>
+        <button mat-button [isViewerDisabled]="(isAdmin | async) === false">
+          ADMIN
+        </button>
+      </div>
+    </div>
+
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Flat</span>
+      <div class="role-buttons">
+        <button
+          mat-flat-button
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'Role USER are not allowed 123'"
+        >
+          USER
+        </button>
+
+        <button
+          mat-flat-button
+          [isViewerDisabled]="(isAdmin | async) === false"
+        >
+          ADMIN
+        </button>
+      </div>
+    </div>
+
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Stroked</span>
+      <div class="role-buttons">
+        <button
+          mat-stroked-button
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'Role USER are not allowed 123'"
+        >
+          USER
+        </button>
+
+        <button
+          mat-stroked-button
+          [isViewerDisabled]="(isAdmin | async) === false"
+        >
+          ADMIN
+        </button>
+      </div>
+    </div>
+
+    <div class="role-buttons-item">
+      <span class="role-buttons-title">Raised</span>
+      <div class="role-buttons">
+        <button
+          mat-raised-button
+          color="primary"
+          [isViewerDisabled]="(isAdmin | async) === true"
+          [viewerTooltipMessage]="'Role USER are not allowed 123'"
+        >
+          USER
+        </button>
+
+        <button
+          mat-raised-button
+          [isViewerDisabled]="(isAdmin | async) === false"
+        >
+          ADMIN
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

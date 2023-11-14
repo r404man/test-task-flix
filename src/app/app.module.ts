@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { RoleBtnDirective } from './directives/role-btn.directive';
+import { MatButtonDirective } from './directives/mat-btn.directive';
 
 @NgModule({
-  declarations: [AppComponent, RoleBtnDirective],
+  declarations: [AppComponent, MatButtonDirective],
   imports: [BrowserModule, MaterialModule],
   providers: [],
   bootstrap: [AppComponent],

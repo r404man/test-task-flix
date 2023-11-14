@@ -5,15 +5,32 @@
   flex-direction: column;
   height: 100vh;
 
-  .app-btn {
-    font-size: 24px;
-    padding: 24px 40px;
-    &:disabled {
-      pointer-events: all !important;
-      cursor: not-allowed !important;
-    }
-    &:last-child {
-      margin-top: 50px;
+  .app-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.role-buttons-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  .role-buttons-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  .role-buttons {
+    button {
+      font-size: 24px;
+      padding: 24px 40px;
+      &:first-child {
+        margin-right: 15px;
+      }
+      &:disabled {
+        pointer-events: all !important;
+        cursor: not-allowed !important;
+      }
     }
   }
 }
